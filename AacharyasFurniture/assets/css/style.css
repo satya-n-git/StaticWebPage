@@ -147,20 +147,6 @@ nav.navbar.bootsnav {
     line-height: 1.2; /* Reduce space between lines */
 }
 
-.navbar-header a.navbar-brand {
-    color: #616060;
-    font-size: 24px;
-    font-weight: 500;
-    text-transform: capitalize;
-    margin: 0;
-}
-
-.tagline {
-    color: #e99c2e;
-    font-size: 18px;
-    margin-top: -5px; /* Reduce space between "Aacharya's" and "Interio & Furniture" */
-    text-transform: capitalize;
-}
 
 /* my code ended. Dr.Nagendra */
 
@@ -996,6 +982,84 @@ span.feature-review {margin-left: 10px;}
     animation-iteration-count: infinite;
     animation-duration:1s;
 }
+
+/* navbar updated code - satya  */ 
+/* Container for the header */
+.header-container {
+    position: fixed; /* Make it sticky */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background-color: #ffffff; /* Adjust to theme */
+    border-bottom: 1px solid #ddd;
+    transition: all 0.3s ease; /* Smooth scrolling effect */
+}
+
+/* Button for toggle menu */
+.menu-toggle {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Logo and text container */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo styling */
+.site-logo {
+    height: 50px;
+    margin-right: 10px;
+    object-fit: contain;
+    transition: height 0.3s ease; /* Adjust logo size on scroll */
+}
+
+/* Text container for brand name and tagline */
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Brand name styling */
+.brand-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.brand-name:hover {
+    color: #007bff;
+}
+
+/* Tagline styling */
+.brand-tagline {
+    font-size: 12px;
+    color: #777;
+    margin-top: 2px;
+}
+
+/* Scrolled-down state */
+.header-container.scrolled {
+    padding: 5px 10px; /* Reduce padding */
+    background-color: #f8f8f8; /* Slightly darker background */
+}
+
+.header-container.scrolled .site-logo {
+    height: 40px; /* Shrink logo size */
+}
+
+
 @keyframes example {
     0%   {bottom:0px;}
     100%  {bottom:7px;}
